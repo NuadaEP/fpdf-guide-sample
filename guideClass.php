@@ -7,7 +7,7 @@
 	{
 		public function __construct()
 		{
-			parent::__construct('L', 'cm', [22, 8]);
+			parent::__construct('P', 'cm');
 
 			$this->AddPage();
 			$this->SetMargins(0, 0, 0);
@@ -23,27 +23,28 @@
 
 		protected function pdf_header()
 		{
-			$this->Image('images/newcard-logo.png', -1.5, -1.5, 8, 0);
-			$this->SetFont('Helvetica','B', 12);
+			$this->Image('images/newcard-logo.png', -2.7, -2.7, 12, 0);
+
+			$this->SetFont('Helvetica','B', 10);
 
 		    $this->SetXY(6.5, 0.3);
-			$this->Cell(7, 1, 'AUTORIZAÇÃO DE CONSULTA Nº ', 0, 1, 'L');
+			$this->Cell(7, 1, 'AUTORIZAÇÃO DE PROCEDIMENTO MÉDICO Nº ', 0, 1, 'L');
 
-		    $this->SetXY(13.5, 0.3);
+		    $this->SetXY(15, 0.3);
 			$this->SetTextColor('255', '0', '0');
 			$this->Cell(2, 1, '51834', 0, 1, 'L');
 
 			$this->SetTextColor('0', '0', '0');
 			$this->SetFont('Helvetica', '', 9);
 
-		    $this->SetXY(18.5, 0.3);
+		    $this->SetXY(18, 0.3);
 			$this->Cell(1.5, 0.5, 'JAÚ - SP', 0, 1, 'L');
 
 			$this->SetFont('Helvetica', '', 7);
-		    $this->SetXY(18.3, 0.6);
+		    $this->SetXY(17.8, 0.6);
 			$this->Cell(1.5, 0.5, '(14) 3416-5444', 0, 1, 'L');
 
-		    $this->SetXY(1, 1.2);
+		    $this->SetXY(0.5, 1.2);
 			$this->Cell(20, 0, '', 1, 1, 'L');
 		}
 
@@ -83,10 +84,10 @@
 		    $this->SetXY(3.5, 3);
 			$this->Cell(1.2, 0.3, 'PROFISSIONAL TESTE', 0, 1, 'L');
 
-		    $this->SetXY(19.5, 1.5);
+		    $this->SetXY(19, 1.5);
 			$this->Cell(1.2, 0.3, '17597', 0, 1, 'L');
 
-		    $this->SetXY(19.5, 1.5);
+		    $this->SetXY(19, 1.5);
 			$this->Cell(1.2, 1, '03/05/2019', 0, 1, 'L');
 		}
 
