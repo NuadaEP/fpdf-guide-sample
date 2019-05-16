@@ -16,6 +16,7 @@
 			$this->pdf_header();
 			$this->pdf_client_info();
 			$this->pdf_treatment();
+			$this->subscriptions();
 			$this->pdf_output('oi');
 
 			$this->Output();
@@ -168,7 +169,33 @@
 
 		    $this->SetXY(19, 5.8);
 			$this->Cell(1.2, 0.3, '1 ', 0, 1, 'L');
+		}
 
+		protected function subscriptions()
+		{
+			$this->SetFont('Helvetica', 'B', 7);
+
+		    $this->SetXY(0.5, 6.4);
+			$this->Cell(1.2, 0.3, 'OBS.: FAVOR TRAZER ESTA GUIA NO MOMENTO DO ATENDIMENTO', 0, 1, 'L');
+
+			$this->SetFont('Helvetica', '', 20);
+
+		    $this->SetXY(0.5, 7);
+			$this->Cell(1.2, 0.3, '* 0000051824 *', 0, 1, 'L');
+
+			$this->SetFont('Helvetica', '', 7);
+
+		    $this->SetXY(7, 7.2);
+			$this->Cell(6, 0, '', 1, 1, 'L');
+
+		    $this->SetXY(14, 7.2);
+			$this->Cell(6, 0, '', 1, 1, 'L');
+
+		    $this->SetXY(7, 7);
+			$this->Cell(6, 1, 'LABORATORIO TESTE', 0, 1, 'C');
+
+		    $this->SetXY(14, 7);
+			$this->Cell(6, 1, 'CLIENTE TESTE', 0, 1, 'C');
 		}
 
 		protected function pdf_output($text)
