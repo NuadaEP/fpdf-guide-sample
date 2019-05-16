@@ -10,7 +10,8 @@
 			parent::__construct('L', 'cm', [21, 8]);
 
 			$this->AddPage();
-			$this->SetMargins(0, 0);
+			$this->SetMargins(0, 0, 0);
+			$this->SetAutoPageBreak(false);
 
 			$this->pdf_header();
 			$this->pdf_client_info();
@@ -116,6 +117,57 @@
 		    $this->SetXY(19, 4.2);
 			$this->Cell(1.2, 0.3, '1 ', 0, 1, 'L');
 
+
+		    $this->SetXY(0.5, 4.6);
+			$this->Cell(1.2, 0.3, '95704', 0, 1, 'L');
+
+		    $this->SetXY(3, 4.6);
+			$this->Cell(1.2, 0.3, '66', 0, 1, 'L');
+
+		    $this->SetXY(3.8, 4.6);
+			$this->Cell(1.2, 0.3, 'HEMOGRAMA', 0, 1, 'L');
+
+		    $this->SetXY(19, 4.6);
+			$this->Cell(1.2, 0.3, '1 ', 0, 1, 'L');
+
+
+		    $this->SetXY(0.5, 5);
+			$this->Cell(1.2, 0.3, '95706', 0, 1, 'L');
+
+		    $this->SetXY(3, 5);
+			$this->Cell(1.2, 0.3, '96', 0, 1, 'L');
+
+		    $this->SetXY(3.8, 5);
+			$this->Cell(1.2, 0.3, 'PCR-ULTRA SENSIVEL', 0, 1, 'L');
+
+		    $this->SetXY(19, 5);
+			$this->Cell(1.2, 0.3, '1 ', 0, 1, 'L');
+
+
+		    $this->SetXY(0.5, 5.4);
+			$this->Cell(1.2, 0.3, '95706', 0, 1, 'L');
+
+		    $this->SetXY(3, 5.4);
+			$this->Cell(1.2, 0.3, '96', 0, 1, 'L');
+
+		    $this->SetXY(3.8, 5.4);
+			$this->Cell(1.2, 0.3, 'PCR-ULTRA SENSIVEL', 0, 1, 'L');
+
+		    $this->SetXY(19, 5.4);
+			$this->Cell(1.2, 0.3, '1 ', 0, 1, 'L');
+
+
+		    $this->SetXY(0.5, 5.8);
+			$this->Cell(1.2, 0.3, '95706', 0, 1, 'L');
+
+		    $this->SetXY(3, 5.8);
+			$this->Cell(1.2, 0.3, '96', 0, 1, 'L');
+
+		    $this->SetXY(3.8, 5.8);
+			$this->Cell(1.2, 0.3, 'PCR-ULTRA SENSIVEL', 0, 1, 'L');
+
+		    $this->SetXY(19, 5.8);
+			$this->Cell(1.2, 0.3, '1 ', 0, 1, 'L');
 
 		}
 
