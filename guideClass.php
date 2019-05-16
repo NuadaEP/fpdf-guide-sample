@@ -1,8 +1,6 @@
 <?php
 	require 'fpdf/fpdf.php';
 
-	// $fpdf = new FPDF();
-
 	class Guide extends FPDF
 	{
 		public function __construct()
@@ -23,7 +21,7 @@
 
 		protected function pdf_header()
 		{
-			$this->Image('images/newcard-logo.png', -2.7, -2.7, 12, 0);
+			$this->Image('images/php.png', 1.5, -0.2, 3, 0);
 
 			$this->SetFont('Helvetica','B', 10);
 
@@ -37,12 +35,12 @@
 			$this->SetTextColor('0', '0', '0');
 			$this->SetFont('Helvetica', '', 9);
 
-		    $this->SetXY(18, 0.3);
-			$this->Cell(1.5, 0.5, 'JAÚ - SP', 0, 1, 'L');
+		    $this->SetXY(17.3, 0.3);
+			$this->Cell(3, 0.5, 'CIDADE - ESTADO', 0, 1, 'c');
 
 			$this->SetFont('Helvetica', '', 7);
 		    $this->SetXY(17.8, 0.6);
-			$this->Cell(1.5, 0.5, '(14) 3416-5444', 0, 1, 'L');
+			$this->Cell(1.5, 0.5, '(00) 0000-0000', 0, 1, 'L');
 
 		    $this->SetXY(0.5, 1.2);
 			$this->Cell(20, 0, '', 1, 1, 'L');
@@ -98,7 +96,7 @@
 		    $this->SetXY(1, 3.7);
 			$this->Cell(1.2, 0.3, 'TRAT. ', 0, 1, 'L');
 
-		    $this->SetXY(3.5, 3.7);
+		    $this->SetXY(2, 3.7);
 			$this->Cell(1.2, 0.3, 'PROCEDIMENTOS', 0, 1, 'L');
 
 		    $this->SetXY(19.5, 3.7);
