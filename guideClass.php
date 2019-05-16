@@ -62,24 +62,61 @@
 		    $this->SetXY(0.5, 3);
 			$this->Cell(1.2, 0.3, 'PROFISSIONAL: ', 0, 1, 'L');
 
+		    $this->SetXY(17, 1.5);
+			$this->Cell(1.2, 0.3, 'CONTRATO: ', 0, 1, 'L');
+
+		    $this->SetXY(17, 1.5);
+			$this->Cell(1.2, 1, 'EMISSÃO: ', 0, 1, 'L');
+
 			$this->SetFont('Helvetica', '', 7);
 
 		    $this->SetXY(3, 1.5);
-			$this->Cell(1.2, 0.3, 'CLIENTE: ', 0, 1, 'L');
+			$this->Cell(1.2, 0.3, 'CLIENTE TESTE', 0, 1, 'L');
 
 		    $this->SetXY(3, 2);
-			$this->Cell(1.2, 0.3, 'LOCAL ANTED: ', 0, 1, 'L');
+			$this->Cell(1.2, 0.3, 'CLINICA EXCELENT MED', 0, 1, 'L');
 
 		    $this->SetXY(3, 2.5);
-			$this->Cell(1.2, 0.3, 'ENDEREÇO: ', 0, 1, 'L');
+			$this->Cell(1.2, 0.3, 'RUA TESTE, 92 - VILA TESTE - CIDADE TESTE - (00) 0000-0000', 0, 1, 'L');
 
 		    $this->SetXY(3, 3);
-			$this->Cell(1.2, 0.3, 'PROFISSIONAL: ', 0, 1, 'L');
+			$this->Cell(1.2, 0.3, 'PROFISSIONAL TESTE', 0, 1, 'L');
 
+		    $this->SetXY(19, 1.5);
+			$this->Cell(1.2, 0.3, '17597', 0, 1, 'L');
+
+		    $this->SetXY(19, 1.5);
+			$this->Cell(1.2, 1, '03/05/2019', 0, 1, 'L');
 		}
 
 		protected function pdf_treatment()
 		{
+			$this->SetFont('Helvetica', 'B', 7);
+
+		    $this->SetXY(0.5, 3.7);
+			$this->Cell(1.2, 0.3, 'TRAT. ', 0, 1, 'L');
+
+		    $this->SetXY(3, 3.7);
+			$this->Cell(1.2, 0.3, 'PROCEDIMENTOS', 0, 1, 'L');
+
+		    $this->SetXY(19, 3.7);
+			$this->Cell(1.2, 0.3, 'QTD. ', 0, 1, 'L');
+
+			$this->SetFont('Helvetica', '', 7);
+
+		    $this->SetXY(0.5, 4.2);
+			$this->Cell(1.2, 0.3, '95705', 0, 1, 'L');
+
+		    $this->SetXY(3, 4.2);
+			$this->Cell(1.2, 0.3, '133', 0, 1, 'L');
+
+		    $this->SetXY(3.8, 4.2);
+			$this->Cell(1.2, 0.3, 'VHS', 0, 1, 'L');
+
+		    $this->SetXY(19, 4.2);
+			$this->Cell(1.2, 0.3, '1 ', 0, 1, 'L');
+
+
 		}
 
 		protected function pdf_output($text)
